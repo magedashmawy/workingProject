@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Varsita Courses{% endblock %}
+{% block body %}
+<section id="main">
+    
+   
+<div class="sub-title" style="background-image:url(http://demo.themeum.com/wordpress/varsita/wp-content/themes/varsita/images/blog-banner.jpg);background-size: cover;background-position: 50% 50%;padding: 50px 0;">
+    <div class="container">
+        <div class="sub-title-inner">
+            <h2>Courses</h2>            
+	<div class="themeum-breadcrumbs">
+
+		<ul class="breadcrumb">
+			<li>
+				<a href="http://demo.themeum.com/wordpress/varsita" class="breadcrumb_home">Home</a>
+			</li>
+			<li class="active">
+
+				{% for obj in caat|slice:":1" %}
+                {{ obj.category }}
+                {% endfor %}
+		</li>
+	</ul>
+	</div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div id="content" class="site-content row" role="main">
+
+                        
+            <div id="post-570" class="col-md-12 post-570 page type-page status-publish hentry">
+
+                
+            <div class="entry-content row">
+                                                    <div class="col-md-12">
+              <div class="themeum-course-listing "><div class="row">
+
+
+              {%  for obj in caat %}
+
+                        <div class="col-xs-12 col-sm-4">
+                          <div class="themeumlms-course-wrap">
+                            <figure class="themeumlms-course-img">
+                              <img width="750" height="350" src="{{obj.image}}" class="img-responsive wp-post-image" alt="" style=" max-height: 180px;" />
+                              <figcaption class="text-center">
+                                <a href="{% url 'course_details' obj.id %}">Details</a></figcaption>
+                              </figure>
+                              <div class="details">
+                                <h3 style= " width: 300px; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" ><a href="{% url 'course_details' obj.id %}"  >  {{obj.name}}  </a> <br> <br> </h3><h4> by <strong> {{obj.instructorFullName}} </strong></h4><p style= " height: 180px;  width: 300px; display: block;  text-overflow: ellipsis; overflow: hidden;">{{obj.summary}} </p>
+                                <div class="course-details-span">
+                                  <span> {%if obj.price == '0' %}  {{obj.type}} {% else %} {{ obj.price}} {% endif%}  </span><span>{{obj.duration}}</span><span>{{obj.startDate}}</span></div>
+                              </div>
+                            </div>
+                          </div>
+
+              {% endfor %}
+
+                    </div>
+                                </div>
+        </div>
+
+                    </div> <!--/#content-->
+    </div>
+</section> <!--/#main-->
+{% endblock %}

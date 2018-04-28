@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Thank You{% endblock %}
+{% block body %}
+<div class="jumbotron text-xs-center">
+  <h1 class="display-3">Thank You!</h1>
+  <p class="lead"><strong>for joining our course</strong></p>
+  <hr>
+  <p>
+    Having trouble? <a href="#">Contact us</a>
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" href="/category/{{course.id}} " role="button">Continue to course page</a>
+  </p>
+</div>
+
+{% endblock %}

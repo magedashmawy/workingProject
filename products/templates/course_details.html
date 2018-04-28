@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block title %}Course Details Varsita{% endblock %}
+{% block body %}
+<section id="main" class="clearfix">
+
+	<div class="sub-title" style="background-image:url(http://demo.themeum.com/wordpress/varsita/wp-content/themes/varsita/images/blog-banner.jpg);background-size: cover;background-position: 50% 50%;padding: 50px 0;">
+    <div class="container">
+        <div class="sub-title-inner">
+            <h2> {{ course.name }}</h2>
+
+	<div class="themeum-breadcrumbs">
+
+		<ul class="breadcrumb">
+			<li>
+				<a href="http://demo.themeum.com/wordpress/varsita" class="breadcrumb_home">Home</a>
+			</li>
+			<li class="active">
+
+								{{ course.category }}
+		</li>
+	</ul>
+	</div>
+        </div>
+    </div>
+</div>
+	<div id="page" class="container">
+		<div class="row">
+			<div id="post-1002" class="col-sm-8 post-1002 course type-course status-publish has-post-thumbnail hentry tag-football tag-soccer tag-sports course_cat-sports">
+					<div class="course-details">
+				        <header>
+				           <h2 class="course-title"> {{ course.name }} </h2>
+				           	<ul class="course-entry-meta">
+				           		<li> <span>start date: </span>{{ course.startDate }}</li>
+				        </header> <!--/header-->
+          				          				<div class="cousre-details-img">
+							<img width="750" height="350" src="{{ course.image }}" class="img-responsive wp-post-image" alt="" />
+							<div class="course-title">
+				                <p>{{ course.name }}</p>
+				                				                	<p class="coursr-title-bold">{{ course.category }}</p>
+				                			                </div>
+		                </div><!--/.cousre-details-img-->
+												<div class="course-details-text">
+                                                    {{ course.summary }}
+
+						</div><!--/.course-details-text-->
+			            <div class="course-details-title">
+				              <div class="title-left">
+				                <ul>
+				                <li>
+													{%if course.promoMediaUrl == "NotExist"%}
+													<a class="btn btn-primary btn-watch" href="#" >Watch Trailer</a></li>
+													{%else%}
+													<a class="btn btn-primary btn-watch" href="{{course.promoMediaUrl}}" >Watch Trailer</a></li>
+													{%endif%}
+				                			<li>
+
+									<form id="buy_now_form" action="http://demo.themeum.com/wordpress/varsita/wp-admin/admin-ajax.php" method="post" >
+														  <input type="hidden" name="user_id" value="0">
+														  <input type="hidden" name="email" value="">
+														  <input type="hidden" name="product_id" value="1002">
+														  <input type="hidden" name="product_name" value="Sports Training">
+														  <input type="hidden" name="price" value="39">
+														  <span id="spinner"><i class="fa fa-spinner fa-spin"></i></span>
+															<input type="button" class="btn btn-primary"  id="shit1" value="{% if course.price == "0" %} Free {% else %} {{ course.price }} {% endif %}"/>
+															<button class="btn btn-primary" id= "shit2" onclick="location.href='{% url 'login' %}'" type="button"> join</button>
+
+																{%if request.user.is_authenticated%}
+																		<!-- <script type="text/javascript">
+																				document.getElementById("shit2").href="ssssss.com";
+																		</script> -->
+																		{% if course.price != "0" %}
+																		<script>
+																			var divOne = document.getElementById('shit2');
+																			divOne.style.display='none';
+																		</script>
+																		<button class="btn btn-primary" id= "shit3" onclick="location.href='/payment/{{course.id}}'" type="button"> join</button>
+																		{%else%}
+																		<script>
+																			var divOne = document.getElementById('shit2');
+																			divOne.style.display='none';
+																		</script>
+																		<button class="btn btn-primary" id= "shit3" onclick="location.href='/join/{{course.id}}'" type="button"> join</button>
+
+																		{%endif%}
+
+																		{% for cours in request.user.joinedCourses.all %}
+																			{%if cours.id == course.id%}
+
+																			<script type="text/javascript">
+																				var divOne = document.getElementById('shit1');
+																				divOne.style.display='none';
+																				var divTwo = document.getElementById('shit2');
+																				divTwo.style.display='none';
+																				var div3 = document.getElementById('shit3');
+																				div3.style.display='none';
+																			</script>
+																			{%endif%}
+																		{%endfor%}
+																{%endif%}
+
+
+
+
+
+													</form>
+													<div id="simple-msg"></div>
+													<div id="simple-msg-err"></div>
+													<div id="checkout-url" style="display:none;">http://demo.themeum.com/wordpress/varsita/?p=1409</div>
+																				  	</li>
+
+				                </ul>
+				              </div>
+				               	<div class="title-right pull-right btn-duration">
+					              Course Duration: <strong>{{ course.duration }}</strong>
+					              </div>
+
+
+
+
+
+
+											 <div class="course-teacher">
+														<h3>Meet Our Course Teacher</h3>
+							<div class="row">
+
+								<div class="col-sm-3">
+					                <div class="course-teacher-img">
+                                        <img src="{{ course.instructorImageUrl }}" alt="{{ course.instructorFullName }}" class="img-responsive" /></a>
+                                    </div><!--/.course-teacher-img-->
+
+					                <div class="course-teacher-info">
+					                 <span>{{ course.instructorFullName }}</span>
+					                 <!-- <p class="teacher-department">PHP, CSS, HTML</p> -->
+					                </div> <!--/.course-teacher-img-->
+
+								</div><!--/.col-sm-3-->
+																							</div><!--/.row-->
+						</div><!--/.course-teacher-->
+
+
+
+                </div><!--/.row-->
+	</div><!--/.container-->
+</section>
+
+{% endblock %}

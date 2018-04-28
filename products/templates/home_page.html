@@ -1,0 +1,365 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block body %}
+
+		<section id="main" class="clearfix">
+			<div id="content" class="site-content" role="main">
+				<div id="post-90" class="post-90 page type-page status-publish hentry">
+					<div class="entry-content">
+						<div class="  parallax-section vc_custom_1477300941741">
+							<div class="container">
+								<div class="vc_row wpb_row vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="row">
+													<div class="course-search col-md-offset-2 col-sm-12 col-md-8">
+														<h1>Search Your Course</h1>
+														<p>Advance Your Career. Improve Your Life. </p>
+														<form role="search" action="{% url 'search'  %}" method="get" class="custom-search">
+															<input class="custom-input" type="search" name="q" value="{{request.GET.q}}" placeholder="Fnd Course, Tutorials" autocomplete="off"/>
+															<input type="submit" value="" class="transparent-button" />
+														</form>
+													</div>
+												</div>
+												<!--empty div -->               <div class="themeum-divider  themeum-border" style="margin-top:100px; border-bottom-style:none;">    </div>
+												<div class="themeum-lms-feature-course ">
+													<div class="col-sm-3 paddingnone">
+														<div class="feature-course" style="background-color: rgba(180,62,146,.8);">
+															<h3><a href="{% url 'course_details' '795' %}">Neuropsychotherapy
+                                                            </a></h3>
+															<h5 style="color: #0a0a0a">Health and Medicine</h5>
+															<a class="btn-featue" href="{% url 'course_details' '795' %}">View Course <i class="fa fa-long-arrow-right"></i></a>
+														</div>
+													</div>
+													<div class="col-sm-3 paddingnone">
+														<div class="feature-course" style="background-color: rgba(131,63,148,.8);">
+
+															<h3><a href="{% url 'course_details' '752' %}">MediaUcreate</a></h3>
+															<h5 style="color: #0a0a0a">Arts and Design </h5>
+															<a class="btn-featue" href="{% url 'course_details' '752' %}">View Course <i class="fa fa-long-arrow-right"></i></a>
+														</div>
+													</div>
+													<div class="col-sm-3 paddingnone">
+														<div class="feature-course" style="background-color: rgba(243,111,51,.8);">
+															<h3><a href="{% url 'course_details' '852' %}">ELECTRONICS</a></h3><h5 style="color: #0a0a0a">Engineering </h5><a class="btn-featue" href="{% url 'course_details' '852' %}">View Course <i class="fa fa-long-arrow-right"></i></a>
+														</div>
+													</div>
+													<div class="col-sm-3 paddingnone">
+														<div class="feature-course" style="background-color: rgba(141,198,63,.8);">
+															<h3><a href="{% url 'course_details' '825' %}">Internet of Things</a></h3>
+															<h5 style="color: #0a0a0a ">Computers and Technology </h5>
+															<a class="btn-featue" href="{% url 'course_details' '825' %}">View Course <i class="fa fa-long-arrow-right"></i></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="  parallax-section vc_custom_1424244061524">
+							<div class="container">
+								<div class="vc_row wpb_row vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="themeum-action-shortcode " style="">
+													<div class="themeum-action-center">
+														<h3 class="themeum-action-title" style="font-size:30px;line-height:30px;color:#0a0a0a;margin:9px 0px 15px 0px;font-weight:600;">CHECK OUT OUR COURSE CATEGORIES</h3>
+														<p class="themeum-action-subtitle" style="color:#0a0a0a;"> Learn a new skill online, on your time .<br /></p>
+													</div>
+												</div>
+												<!--emty div-->                 <div class="themeum-divider  themeum-border" style="margin-top:70px; border-bottom-style:none;">  </div>
+												<div class="themeum-lms-category-course text-center ">
+													<div class="row">
+
+														<div class="col-sm-3 col-xs-6">
+
+
+                                                            <span class="cat-icon"><a href="{% url 'cat' '0' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+
+                                                            <a class="cat-title" href="{% url 'cat' '0' %}">Health And Medicine<br>
+																<span class="cat-count"></span>
+															</a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '1' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '1' %}">Self Improvement<br>
+																<span class="cat-count"></span>
+															</a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '2' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '2' %}">Lifestyle<br>
+																<span class="cat-count"></span>
+															</a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '3' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '3' %}">Engineering<br>
+																<span class="cat-count"></span>
+															</a>
+														</div>
+													</div>
+
+
+													<div class="row">
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '4' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '4' %}">Business and Economics<br><span class="cat-count"></span></a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '5' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '5' %}">Computers and Technology<br><span class="cat-count"></span></a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '6' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '6' %}">Arts and Design<br><span class="cat-count"></span></a>
+														</div>
+
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '8' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '8' %}">Language and Communication<br><span class="cat-count"></span></a>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-sm-3 col-xs-6">
+															<span class="cat-icon"><a href="{% url 'cat' '8' %}"><i class="fa fa-graduation-cap"></i></a><br></span>
+															<a class="cat-title" href="{% url 'cat' '8' %}">Math and Science<br><span class="cat-count"></span></a>
+														</div>
+
+
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="  parallax-section vc_custom_1477300993978">
+							<div class="container">
+								<div class="vc_row wpb_row vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="themeum-action-shortcode " style="">
+													<div class="row">
+														<div class="col-sm-8">
+															<h3 class="themeum-action-title" style="font-size:46px;line-height:36px;color:#ffffff;font-weight:480;">Our new Course Start in June 2018</h3>
+															<span class="themeum-action-subtitle" style="font-size:14px;color:#ffffff;">  </span>
+														</div>
+														<div class="col-sm-4">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="  vc_custom_1424411374283">
+							<div class="container">
+								<div class="vc_row wpb_row vc_row-fluid">
+									<div class="wpb_column vc_column_container vc_col-sm-12">
+										<div class="vc_column-inner ">
+											<div class="wpb_wrapper">
+												<div class="themeum-action-shortcode " style="">
+													<div class="themeum-action-center">
+														<h3 class="themeum-action-title" style="font-size:30px;line-height:30px;color:#000000;margin:9px 0px 15px 0px;font-weight:700;">POPULAR TOPICS &amp; COURSES</h3>
+														<p class="themeum-action-subtitle" style="color:#000000;"><br /></p>
+													</div>
+												</div>
+
+												<!-- empty div -->							<div class="themeum-divider  themeum-border" style="margin-top:70px; border-bottom-style:none;"></div>
+
+												<div class="themeum-lms-popular-course ">
+													<div class="row">
+														              {%  for obj in all|slice:"90:99" %}
+
+                                                                    <div class="col-xs-12 col-sm-4">
+                                                                      <div class="themeumlms-course-wrap">
+                                                                        <figure class="themeumlms-course-img">
+                                                                          <img width="750" height="350" src="{{obj.image}}" class="img-responsive wp-post-image" alt="" style=" max-height: 180px;" />
+                                                                          <figcaption class="text-center">
+                                                                            <a href="{% url 'course_details' obj.id %}">Details</a></figcaption>
+                                                                          </figure>
+                                                                          <div class="details">
+                                                                            <h3 style= " width: 300px; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" ><a href="{% url 'course_details' obj.id %}"  >  {{obj.name}}  </a> <br> <br> </h3><h4> by <strong> {{obj.instructorFullName}} </strong></h4><p style= " height: 180px;  width: 300px; display: block;  text-overflow: ellipsis; overflow: hidden;">{{obj.summary}} </p>
+                                                                            <div class="course-details-span">
+                                                                              <span> {%if obj.price == '0' %}  {{obj.type}} {% else %} {{ obj.price}} {% endif%}  </span><span>{{obj.duration}}</span><span>{{obj.startDate}}</span></div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+
+                                                                   {% endfor %}
+                                                        </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="  parallax-section vc_custom_1477301040719">
+								<div class="container">
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-3">
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="themeum-icon " style="text-align:center;">
+														<span style="display:inline-block;text-align:center;margin-bottom:20px;color:#ffffff;background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);;">
+															<i class="fa fa-book" style=";"></i>
+														</span>
+													</div>
+
+													<div class="themeum-shortocde-counter " style="text-align:center;">
+														<div class="counter-content" style="background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);">
+															<div class="themeum-counter-number" data-digit="147" data-duration="2000" style="color:#ffffff;font-size:48px;line-height:48px;"></div>
+															<div class="counter-number-title" style="color:#ffffff;font-size:14px;line-height:14px;">Total Courses</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="wpb_column vc_column_container vc_col-sm-3">
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="themeum-icon " style="text-align:center;">
+														<span style="display:inline-block;text-align:center;margin-bottom:20px;color:#ffffff;background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);;">
+															<i class="fa fa-users" style=";"></i>
+														</span>
+													</div>
+													<div class="themeum-shortocde-counter " style="text-align:center;">
+														<div class="counter-content" style="background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);">
+															<div class="themeum-counter-number" data-digit="2330" data-duration="2000" style="color:#ffffff;font-size:48px;line-height:48px;">
+															</div>
+															<div class="counter-number-title" style="color:#ffffff;font-size:14px;line-height:14px;">Total Members</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="wpb_column vc_column_container vc_col-sm-3">
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="themeum-icon " style="text-align:center;">
+														<span style="display:inline-block;text-align:center;margin-bottom:20px;color:#ffffff;background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);;">
+															<i class="fa fa-trophy" style=";"></i>
+														</span>
+													</div>
+													<div class="themeum-shortocde-counter " style="text-align:center;">
+														<div class="counter-content" style="background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);">
+															<div class="themeum-counter-number" data-digit="120" data-duration="2000" style="color:#ffffff;font-size:48px;line-height:48px;"></div>
+															<div class="counter-number-title" style="color:#ffffff;font-size:14px;line-height:14px;">Free Tutorials</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="wpb_column vc_column_container vc_col-sm-3">
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="themeum-icon " style="text-align:center;">
+														<span style="display:inline-block;text-align:center;margin-bottom:20px;color:#ffffff;background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);;">
+															<i class="fa fa-user" style=";"></i>
+														</span>
+													</div>
+													<div class="themeum-shortocde-counter " style="text-align:center;">
+														<div class="counter-content" style="background-color:rgba(255,255,255,0.01);border-style:solid;border-color:rgba(255,255,255,0.01);">
+															<div class="themeum-counter-number" data-digit="100" data-duration="2000" style="color:#ffffff;font-size:48px;line-height:48px;">
+															</div>
+															<div class="counter-number-title" style="color:#ffffff;font-size:14px;line-height:14px;">Best Teachers</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="  vc_custom_1423638096881">
+								<div class="container">
+									<div class="vc_row wpb_row vc_row-fluid">
+										<div class="wpb_column vc_column_container vc_col-sm-12">
+											<div class="vc_column-inner ">
+												<div class="wpb_wrapper">
+													<div class="themeum-action-shortcode " style="">
+														<div class="themeum-action-center">
+															<h3 class="themeum-action-title" style="font-size:30px;line-height:30px;color:#000000;margin:9px 0px 15px 0px;font-weight:700;">TRY OUR FREE COURSES</h3>
+															<p class="themeum-action-subtitle" style="color:#000000;"><br /> </p>
+														</div>
+													</div>
+
+
+													<div class="themeum-divider  themeum-border" style="margin-top:70px; border-bottom-style:none;"></div>
+													<div class="themeum-lms-free-course ">
+														<div class="row">
+															 {%  for obj in all|slice:"0:3" %}
+
+                                                                    <div class="col-xs-12 col-sm-4">
+                                                                      <div class="themeumlms-course-wrap">
+                                                                        <figure class="themeumlms-course-img">
+                                                                          <img width="750" height="350" src="{{obj.image}}" class="img-responsive wp-post-image" alt="" style=" max-height: 180px;" />
+                                                                          <figcaption class="text-center">
+                                                                            <a href="{% url 'course_details' obj.id %}">Details</a></figcaption>
+                                                                          </figure>
+                                                                          <div class="details">
+                                                                            <h3 style= " width: 300px; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" ><a href="{% url 'course_details' obj.id %}"  >  {{obj.name}}  </a> <br> <br> </h3><h4> by <strong> {{obj.instructorFullName}} </strong></h4><p style= " height: 180px;  width: 300px; display: block;  text-overflow: ellipsis; overflow: hidden;">{{obj.summary}} </p>
+                                                                            <div class="course-details-span">
+                                                                              <span> {%if obj.price == '0' %}  {{obj.type}} {% else %} {{ obj.price}} {% endif%}  </span><span>{{obj.duration}}</span><span>{{obj.startDate}}</span></div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+
+                                                                   {% endfor %}
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="  parallax-section vc_custom_1477301098077">
+									<div class="container">
+										<div class="vc_row wpb_row vc_row-fluid">
+											<div class="wpb_column vc_column_container vc_col-sm-12">
+												<div class="vc_column-inner ">
+													<div class="wpb_wrapper">
+														<div class="themeum-action-shortcode " style="">
+															<div class="themeum-action-center">
+																<h3 class="themeum-action-title" style="font-size:40px;line-height:40px;color:#ffffff;margin:10px 0px 10px 0px;font-weight:700;">YOUR PLACE TO LEARN REAL WORLD SKILLS ONLINE</h3>
+																<p class="themeum-action-subtitle" style="font-size:14px;color:#ffffff;"><br /></p>
+																<a class="acton-btn" style="margin:20px 0 0 0;display:inline-block;" href="{% url 'register' %}">Sign Up</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div> <!--/#content-->
+</section> <!--/#main-->
+{% endblock %}
